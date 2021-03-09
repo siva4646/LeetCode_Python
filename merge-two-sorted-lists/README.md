@@ -1,3 +1,4 @@
+[Discussion Post (created on 9/2/2021 at 11:45)](https://leetcode.com/problems/merge-two-sorted-lists/solution/)  
 <h2>21. Merge Two Sorted Lists</h2><h3>Easy</h3><hr><div><p>Merge two sorted linked lists and return it as a <strong>sorted</strong> list. The list should be made by splicing together the nodes of the first two lists.</p>
 
 <p>&nbsp;</p>
