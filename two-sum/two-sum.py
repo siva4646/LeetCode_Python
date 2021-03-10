@@ -1,6 +1,6 @@
 class Solution(object):
     def twoSum(self, nums, target):
-        if len(nums) == None:
+        if not nums or len(nums) == 0:
             return []
         
         dic = {}
@@ -8,8 +8,8 @@ class Solution(object):
             if nums[i] not in dic:
                 dic[target - nums[i]] = i
             else:
-                return dic[nums[i]], i
-            
+                return dic[nums[i]],i
+      
             
             
             
