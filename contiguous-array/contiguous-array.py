@@ -12,10 +12,12 @@ class Solution:
             else:
                 rSum += 1
             
+                
             if rSum in dic:
                 lenthSubArray = max(lenthSubArray, i - dic[rSum])
             else:
                 dic[rSum] = i
+                
         return lenthSubArray
         
           
