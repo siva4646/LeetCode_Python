@@ -16,15 +16,17 @@ class Solution:
             queue_len = len(queue)
             for i in range(queue_len):
                 node = queue.popleft()
-                
-                if i == queue_len - 1:
-                    result.append(node.val)
+                # Queue Structure 
+                # print(i, queue_len, node.val)
+                # if i == queue_len - 1:
+                #     result.append(node.val)
                     
                 if node.left != None:
                     queue.append(node.left)
                     
                 if node.right != None:
                     queue.append(node.right)
-                    
+            result.append(node.val)    # avoid O(2^n)
+            
         return result
                     
