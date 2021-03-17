@@ -1,3 +1,4 @@
+[Discussion Post (created on 17/2/2021 at 13:51)](https://leetcode.com/problems/top-k-frequent-elements/solution/)  
 <h2>347. Top K Frequent Elements</h2><h3>Medium</h3><hr><div><p>Given a non-empty array of integers, return the <b><i>k</i></b> most frequent elements.</p>
 
 <p><strong>Example 1:</strong></p>
