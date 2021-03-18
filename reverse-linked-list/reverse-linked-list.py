@@ -17,7 +17,7 @@ class Solution:
             prev = curr
             curr = fast
             fast = fast.next
+            
         curr.next = prev
         return curr
-            
             
