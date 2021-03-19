@@ -1,6 +1,5 @@
 class Node:
     def __init__(self, key, val):
-        # instances
         self.key = key
         self.val = val
         self.prev = None
@@ -11,11 +10,11 @@ class LRUCache:
         self.dic = {}
         self.capacity = capacity
         
-        self.head = Node(-1,-1)
-        self.tail = Node(-1,-1)
+        self.head = Node(-1, -1)
+        self.tail = Node(-1, -1)
         self.head.next = self.tail
         self.tail.prev = self.head
-
+    
     def get(self, key: int) -> int:
         if key not in self.dic:
             return -1
@@ -39,15 +38,20 @@ class LRUCache:
             self.add(newNode)
             self.dic[key] = newNode
             
-    def remove(self, node):
-        node.prev.next = node.next
-        node.next.prev = node.prev
-        
     def add(self, node):
         node.prev = self.head
         node.next = self.head.next
         self.head.next = node
         node.next.prev = node
+
+    def remove(self, node):
+        node.prev.next = node.next
+        node.next.prev = node.prev
+    
+        
+    
+        
+
 
          
         
