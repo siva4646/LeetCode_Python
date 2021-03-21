@@ -4,6 +4,8 @@
 #         self.val = val
 #         self.left = left
 #         self.right = right
+# Time : O(N) since one has to visit each node.
+# Space : O(D) to keep the queues, where DD is a tree diameter
 class Solution:
     def rightSideView(self, root: TreeNode) -> List[int]:
         if not root:
@@ -18,6 +20,7 @@ class Solution:
                 node = queue.popleft()
                 # Queue Structure 
                 # print(i, queue_len, node.val)
+                # Left side view it's i == 0
                 # if i == queue_len - 1:
                 #     result.append(node.val)
                     
