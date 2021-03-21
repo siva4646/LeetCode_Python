@@ -6,8 +6,7 @@ class RandomizedSet:
         """
         self.dic = {}
         self.list = []
-
-
+        
     def insert(self, val: int) -> bool:
         """
         Inserts a value to the set. Returns true if the set did not already contain the specified element.
@@ -17,6 +16,8 @@ class RandomizedSet:
         self.dic[val] = len(self.list)
         self.list.append(val)
         return True
+        
+            
     
     def remove(self, val: int) -> bool:
         """
@@ -29,12 +30,13 @@ class RandomizedSet:
             del self.dic[val]
             return True
         return False
-
+  
     def getRandom(self) -> int:
         """
         Get a random element from the set.
         """
         return choice(self.list)
+ 
         
 
 #https://www.youtube.com/watch?v=ufsUFkbypsc&ab_channel=thecodingworld
