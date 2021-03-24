@@ -1,3 +1,1 @@
-# LeetCode_Python
-
-Interview Prepartion.
+# Improving Problem Solving Skill
