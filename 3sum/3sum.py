@@ -28,8 +28,6 @@ class Solution:
                     
         return result 
     
-# https://www.youtube.com/watch?v=jzZsG8n2R9A&ab_channel=NeetCode
-# 
                     
         
         
