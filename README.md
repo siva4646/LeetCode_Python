@@ -1,5 +1,5 @@
 # LeetCode Python
 
-* Improving Problem Solving Skill *
+*Improving Problem Solving Skill*
 
 
