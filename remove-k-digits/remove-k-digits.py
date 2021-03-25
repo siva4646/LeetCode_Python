@@ -1,5 +1,5 @@
-class Solution:
-    def removeKdigits(self, num: str, k: int) -> str:
+class Solution(object):
+    def removeKdigits(self, num, k):
         if not num or len(num) == 0:
             return "0"
         
@@ -17,21 +17,3 @@ class Solution:
         if len(result) != 0:
             return result
         return "0"
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
