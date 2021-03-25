@@ -1,41 +1,31 @@
-class TimeMap(object):
+class TimeMap:
 
     def __init__(self):
         """
         Initialize your data structure here.
         """
         self.map = collections.defaultdict(list)
-        
-
-    def set(self, key, value, timestamp):
-        """
-        :type key: str
-        :type value: str
-        :type timestamp: int
-        :rtype: None
-        """
-        self.map[key].append((timestamp, value))
         # print(self.map)
         
 
-    def get(self, key, timestamp):
-        """
-        :type key: str
-        :type timestamp: int
-        :rtype: str
-        """
+    def set(self, key: str, value: str, timestamp: int) -> None:
+        self.map[key].append((timestamp, value))
+        
+
+    def get(self, key: str, timestamp: int) -> str:
         items = self.map[key]
-        low = 0 
-        right = len(items) 
-        while low < right:
-            mid = (low + right) // 2
+        low = 0
+        high = len(items)
+        
+        while low < high:
+            mid = (low + high) // 2
             if items[mid][0] > timestamp:
-                right = mid
+                high = mid
             else:
                 low = mid + 1
         if low == 0:
             return ''
-        return items[low - 1][1] 
+        return items[low-1][1]
             
             
             
