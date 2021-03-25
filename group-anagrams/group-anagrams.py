@@ -1,24 +1,21 @@
-# Time: O(N)
-# Space: O(K) length of strings
+#Time Complexity: O(N Klogk)
+# Space Complexity: O(NK)
 
-class Solution(object):
-    def groupAnagrams(self, strs):
-        """
-        :type strs: List[str]
-        :rtype: List[List[str]]
-        """
+class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
         if not strs or len(strs) == 0:
             return []
         
-        dic = {}
+        dic = collections.defaultdict(list)
         result = []
+        
         for word in strs:
-            word_sorted = "".join(sorted(word))
-            if word_sorted not in dic:
-                dic[word_sorted] = [word]
+            sorted_word = "".join(sorted(word))
+            if sorted_word not in dic:
+                dic[sorted_word] = [word]
             else:
-                dic[word_sorted].append(word)
+                dic[sorted_word].append(word)
                 
-        for key,value in dic.items():
+        for key, value in dic.items():
             result.append(value)
         return result
