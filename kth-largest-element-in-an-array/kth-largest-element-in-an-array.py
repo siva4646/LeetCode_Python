@@ -4,16 +4,15 @@ class Solution:
             return 0
         
         topK = []
-        
         for num in nums:
             heapq.heappush(topK, num)
+            
             if len(topK) > k:
                 heapq.heappop(topK)
+                
         return topK[0]
             
-        
 
-        
         
         
         
