@@ -19,7 +19,7 @@ class Solution:
         return len_point
     
     def binarySearch(self, effBSArray, low, high, target): # normal and closed Binary search
-        while low <= high:
+        while low <= high: # Binary search While low <= high
             mid = low + (high - low) // 2
             if effBSArray[mid] == target:
                 return mid
