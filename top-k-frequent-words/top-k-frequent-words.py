@@ -3,8 +3,8 @@ class Solution:
         if not words or len(words) == 0:
             return words
         
+        max_heap = []
         dic = {}
-        maxHeap = []
         result = []
         for word in words:
             if word not in dic:
@@ -13,9 +13,9 @@ class Solution:
                 dic[word] += 1
         
         for key, value in dic.items():
-            heapq.heappush(maxHeap, (-value, key))
-        
+            heapq.heappush(max_heap, (-value, key))
+            
         while k != 0:
-            result.append(heapq.heappop(maxHeap)[1])
+            result.append(heapq.heappop(max_heap)[1])
             k -= 1
         return result
