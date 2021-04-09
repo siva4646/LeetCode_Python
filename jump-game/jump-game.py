@@ -1,5 +1,5 @@
-class Solution(object):
-    def canJump(self, nums):
+class Solution:
+    def canJump(self, nums: List[int]) -> bool:
         maxdest = float("-inf")
         pos = 0
         
@@ -12,4 +12,5 @@ class Solution(object):
         if pos >= len(nums) - 1:
             return True
         return False
+                
         
