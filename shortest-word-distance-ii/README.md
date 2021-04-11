@@ -1,3 +1,4 @@
+[Discussion Post (created on 11/3/2021 at 17:20)](https://leetcode.com/problems/shortest-word-distance-ii/solution/)  
 <h2>244. Shortest Word Distance II</h2><h3>Medium</h3><hr><div><p>Design a data structure that will be initialized with a string array, and then it should answer queries of the shortest distance between two different strings from the array.</p>
 
 <p>Implement the <code>WordDistance</code> class:</p>
