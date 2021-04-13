@@ -1,6 +1,3 @@
-#Time Complexity: O(N Klogk)
-# Space Complexity: O(NK)
-
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
         if not strs or len(strs) == 0:
@@ -16,6 +13,7 @@ class Solution:
             else:
                 dic[sorted_word].append(word)
                 
-        for key, value in dic.items():
-            result.append(value)
+        for key, items in dic.items():
+            result.append(items)
         return result
+        
