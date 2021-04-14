@@ -4,15 +4,11 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        if not nums or len(nums) == 0:
-            return -1
-        
         for i in range(len(nums)):
-            next_idx = abs(nums[i]) - 1
-            if nums[next_idx] > 0:
-                nums[next_idx] *= -1
+            new_Index = abs(nums[i])
+            if nums[new_Index] > 0:
+                nums[new_Index] *= -1
+                #print(nums)
             else:
-                return next_idx + 1
-            
-                
+                return new_Index 
         
