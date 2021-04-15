@@ -10,12 +10,12 @@ class Solution:
         
         for char in s:
             if char in dic:
-                if not stack or dic[char] != stack.pop():
+                if len(stack) == 0  or dic[char] != stack.pop():
                     return False
             else:
                 stack.append(char)
                 
-        if not stack:
+        if len(stack) == 0:
             return True
         return False
          
