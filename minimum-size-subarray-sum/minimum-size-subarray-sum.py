@@ -7,19 +7,18 @@ class Solution(object):
         
         while left < len(nums):
             if rSum < target:
-                rSum += nums[left]
+                rSum = rSum + nums[left]
                 left += 1
-            
-            while rSum >= target:
-                if left - right <= rLen:
-                    rLen = left - right
                 
+            while rSum >= target:
+                if left - right < rLen:
+                    rLen = left - right
                 rSum = rSum - nums[right]
                 right += 1
                 
-        if rLen == float('inf'):
+        if rLen == float("inf"):
             return 0
-        return rLen 
+        return rLen
                 
             
         
