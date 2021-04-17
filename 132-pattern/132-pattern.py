@@ -3,24 +3,26 @@ class Solution:
         if not nums or len(nums) == 0:
             return False
         
-        minlist = []
+        min_nums = []
         stack = []
         
-        minlist.append(nums[0])
+        min_nums.append(nums[0])
         
         for i in range(1, len(nums)):
-            minlist.append(min(nums[:i])) # add min to the minlist
+            min_nums.append(min(nums[:i])) # add min to the minlist
             
-        for j in range(len(nums)-1, -1, -1): # length start 1 and index form 0
-            if nums[j] > minlist[j]:
-                while stack and stack[-1] <= minlist[j]:
+        for i in range(len(nums)-1, -1, -1):
+            # 4
+            if( nums[i] > min_nums[i] ):
+                # 5
+                while( stack and stack[-1] <= min_nums[i] ):
                     stack.pop()
-                    
-                if stack and stack[-1] < nums[j]:
+                # 6
+                if(stack and min_nums[i] < stack[-1] < nums[i] ):
                     return True
-                stack.append(nums[j])
-                
-        return False
+                # 4
+                stack.append(nums[i])
+        return False       
             
             
             
