@@ -6,9 +6,9 @@
 #         self.right = right
 class Solution:
     def zigzagLevelOrder(self, root: TreeNode) -> List[List[int]]:
-        if root == None:
-            return None
         
+        if root == None:
+            return []
         queue = deque()
         queue.append(root)
         result = []
@@ -21,8 +21,7 @@ class Solution:
                 result.append(list(temp))
             else:
                 result.append(reversed(list(temp)))
-            
-            flag = not flag
+            flag = not flag # We have to neget not direct false
             
             for i in range(len(queue)):
                 node = queue.popleft()
@@ -31,9 +30,10 @@ class Solution:
                 if node.left != None:
                     queue.append(node.left)
                     temp.append(node.left.val)
-                
                 if node.right != None:
                     queue.append(node.right)
                     temp.append(node.right.val)
                     
         return result
+        
+        
