@@ -16,12 +16,12 @@ class MedianFinder:
         """
         maxHeap = self.maxHeap
         minHeap = self.minHeap
-        if len(maxHeap) == 0 or num <= -maxHeap[0]:
+        if len(maxHeap) == 0 or num < -maxHeap[0]:
             heapq.heappush(maxHeap, -num)
            
         else:
             heapq.heappush(minHeap, num)
-       # print(maxHeap, minHeap)
+        #print(maxHeap, minHeap)
         if len(maxHeap) - len(minHeap) >= 2:
             heapq.heappush(minHeap, -heapq.heappop(maxHeap))
         elif len(minHeap) - len(maxHeap) >= 2:
@@ -33,12 +33,15 @@ class MedianFinder:
         """
         :rtype: float
         """
+        # if even number in both minHeap and maxHeap
         if len(self.minHeap) == len(self.maxHeap):
             return (self.minHeap[0] - self.maxHeap[0]) / 2
-        elif len(self.minHeap) > len(self.maxHeap):
+        
+        # if odd number then just remove from minHeap if len(minHeap) > len(maxHeap)
+        elif len(self.minHeap) > len(self.maxHeap): # [2,3] [-1]
             return self.minHeap[0]
         else:
-            return -self.maxHeap[0]
+            return -self.maxHeap[0] # [3] [-1,-2]
         
 
 #https://www.youtube.com/watch?v=EcNbRjEcb14&ab_channel=KeertiPurswani
