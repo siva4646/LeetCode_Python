@@ -16,10 +16,12 @@ class MedianFinder:
         """
         maxHeap = self.maxHeap
         minHeap = self.minHeap
-        if len(maxHeap) == 0 or num < -maxHeap[0]:
+        if len(maxHeap) == 0 or num <= -maxHeap[0]:
             heapq.heappush(maxHeap, -num)
+           
         else:
             heapq.heappush(minHeap, num)
+       # print(maxHeap, minHeap)
         if len(maxHeap) - len(minHeap) >= 2:
             heapq.heappush(minHeap, -heapq.heappop(maxHeap))
         elif len(minHeap) - len(maxHeap) >= 2:
